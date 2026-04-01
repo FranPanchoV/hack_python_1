@@ -1,4 +1,8 @@
 
+"""
+Módulo de pruebas unitarias para validar las funciones de transformación de texto
+y manipulación de listas de la serie 'hack_python_1'.
+"""
 from hack_1 import fn_hack_1
 from hack_2 import fn_hack_2
 from hack_3 import fn_hack_3
@@ -13,6 +17,7 @@ from hack_10 import fn_hack_10
 
 # h-1
 def test_hack_1():
+    """Test fn_hack_1 returns 'FOOZIMAN' in uppercase."""
     v = fn_hack_1()
     ck_1 = True if v != "" else False
     ck_2 =  v.isupper() == True
@@ -37,15 +42,17 @@ def test_hack_3():
     ck_3 = v == "Fooziman"
     assert (ck_1,ck_2,ck_3) == (True,True,True)
 
-
 # h-4
 def test_hack_4():
-     v = fn_hack_4()
-     ck_1 = True if v != "" else False
-     ck_2 = v[len(v)-1].isupper() == True
-     ck_3 = v == "foozimaN"
-     assert (ck_1,ck_2,ck_3) == (True,True,True)
-    
+    """
+    Prueba unitaria para validar la transformación de la última letra
+    de 'fooziman' a mayúscula.
+    """
+    v = fn_hack_4()
+    ck_1 = True if v != "" else False
+    ck_2 = v[len(v)-1].isupper() == True
+    ck_3 = v == "foozimaN"
+    assert (ck_1,ck_2,ck_3) == (True,True,True)
 
 # h-5
 def test_hack_5():
@@ -55,25 +62,22 @@ def test_hack_5():
     ck_3 = v == "f00z1m@n"
     assert (ck_1,ck_2,ck_3) == (True,True,True)
 
-    
-#h-6 
+#h-6
 def test_hack_6():
     v = fn_hack_6()
     ck_1 = True if type(v) is list else False
     ck_2 = True if len(v) != 0 else False
     ck_3 = v == [0,1,2,3,4,5]
     assert (ck_1,ck_2,ck_3) == (True,True,True)
-    
 
 # h-7
 def test_hack_7():
     v = fn_hack_7()
     ck_1 = True if type(v) is list else False
     ck_2 = True if len(v) != 0 else False
-    ck_3 = v == [5,4,3,2,1,0]     
+    ck_3 = v == [5,4,3,2,1,0]
     assert (ck_1,ck_2,ck_3) == (True,True,True)
 
-    
 # h-8
 def test_hack_8():
     v = fn_hack_8()
@@ -82,8 +86,7 @@ def test_hack_8():
     ck_3 = v == [3,5,7]
     assert (ck_1,ck_2,ck_3) == (True,True,True)
 
-    
-# h-9    
+# h-9
 def test_hack_9():
     v = fn_hack_9()
     ck_1 = True if type(v) is list else False
@@ -91,11 +94,25 @@ def test_hack_9():
     ck_3 = v == [1,'@',2,'@',3,'@']
     assert (ck_1,ck_2,ck_3) == (True,True,True)
 
-    
-# h-10    
+
+# h-10
 def test_hack_10():
     v = fn_hack_10()
     ck_1 = True if type(v) is list else False
     ck_2 = True if len(v) != 0 else False
     ck_3 = v == ["F","0","0","Z","1","M","@","N"]
     assert (ck_1,ck_2,ck_3) == (True,True,True)
+
+if __name__ == "__main__":
+    test_hack_1()
+    test_hack_2()
+    test_hack_3()
+    test_hack_4()
+    test_hack_5()
+    test_hack_6()
+    test_hack_7()
+    test_hack_8()
+    test_hack_9()
+    test_hack_10()
+    # Este mensaje ahora sí es real porque está al final de todo
+    print("¡Felicidades! Todos los tests (1-10) pasaron exitosamente.")
