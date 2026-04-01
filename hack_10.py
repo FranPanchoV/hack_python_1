@@ -8,7 +8,6 @@ def fn_hack_10():
     """
     result = "fooziman"
     # 1. Primero aplicamos todos los reemplazos de caracteres y pasamos a mayúsculas
-    # 'o' -> '0', 'i' -> '1', 'a' -> '@'
     result = result.replace("o", "0").replace("i", "1").replace("a", "@").upper()
     # 2. Convertimos el string resultante en una lista de caracteres
     result = list(result)

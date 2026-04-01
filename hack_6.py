@@ -6,7 +6,7 @@ def fn_hack_6():
     Llena una lista con los números del 0 al 5 usando un bucle for.
     """
     result = []
-    # Generamos números del 0 al 5
+    # Se generan números del 0 al 5
     for i in range(6):
         result.append(i)
     return result
